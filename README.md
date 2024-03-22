@@ -1,0 +1,1 @@
+# Dolar13-github.pl
