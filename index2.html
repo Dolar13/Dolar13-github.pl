@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <style>
+        body {
+            background: url(imgs/Mocnyfull3.png) no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: rgb(85, 85, 84);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-toggle {
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .menu-options {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: rgb(85, 85, 84);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .menu-options a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        .menu-options a:hover {
+            color: #ccc;
+        }
+        .form-container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: rgba(85, 85, 84, 0.5); /* Przezroczystość formularza */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: white; /* Ustawienie tła pól na białe */
+        }
+        .form-container input[type="submit"] {
+            background-color: #333; /* Zmiana koloru tła przycisku */
+            color: white; /* Zmiana koloru tekstu na biały */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="imgs/Logo1.png" alt="Logo Kociołek.pl">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- Ikona trzech poziomych kresek -->
+        <div class="menu-options" id="menuOptions">
+            <a href="index.html">Strona główna</a>
+            <a href="index2.html">Kontakt</a>
+            <a href="index4.html">O nas</a>
+        </div>
+    </div>
+    <div class="form-container">
+        <h2>Formularz kontaktowy</h2>
+        <form method="post">
+            <input type="text" name="name" placeholder="Imię" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="text" name="subject" placeholder="Temat" required><br>
+            <textarea name="message" placeholder="Wiadomość" rows="6" required></textarea><br>
+            <a href="index3.html">Wyślij</a>
+        </form>
+    </div>
+    
+
+    <script>
+        function toggleMenu() {
+            var menuOptions = document.getElementById("menuOptions");
+            menuOptions.style.display = (menuOptions.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

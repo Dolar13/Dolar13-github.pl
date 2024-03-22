@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kociołek.pl</title>
+    <style>
+        body {
+            background: url(imgs/Mocnyfull3.png) no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: rgb(48, 48, 47);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-toggle {
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .menu-options {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: rgb(48, 48, 47);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .menu-options a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        .menu-options a:hover {
+            color: #4b4b4b;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Zmiana liczby kolumn na 3 */
+            gap: 20px;
+            padding: 20px;
+            justify-items: center; /* Ustawienie opisów pod obrazkami w centrum */
+        }
+        .gallery img {
+            width: 110%;
+            height: auto;
+            background-color: #4b4b4b; /* Dodane tło dla obrazków */
+        }
+        .gallery figcaption {
+            text-align: center; /* Centrowanie tekstu opisu */
+            margin-top: 10px; /* Odstęp między obrazkiem a opisem */
+            color: white; /* Zmiana koloru czcionki na biały */
+            background-color: #4b4b4b; /* Dodane tło dla opisów */
+            padding: 10px
+        }
+        @media screen and (max-width: 600px) {
+            .header {
+                text-align: center;
+            }
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="imgs/Logo1.png" alt="Logo Kociołek.pl">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- Ikona trzech poziomych kresek -->
+        <div class="menu-options" id="menuOptions">
+            <a href="index.html">Strona główna</a>
+            <a href="index2.html">Kontakt</a> <!-- Zmiana linku na kontakt.html -->
+            <a href="index4.html">O nas</a>
+        </div>
+    </div>
+    <div class="gallery">
+        <figure>
+            <img src="imgs/zdjecie1.jpg" alt="Zdjęcie 1">
+            <figcaption>Mojito<br>
+            Świeży, cytrusowy i orzeźwiający koktajl na bazie rumu, mięty, soku z limonki, cukru i sody.<br>
+            Składniki:<br>
+            -50 ml białego rumu<br>
+            -8-10 listków mięty<br>
+            -Sok z 1 limonki (ok. 30 ml)<br>
+            -2 łyżeczki cukru lub syropu cukrowego<br>
+            -Około 60 g truskawek (opcjonalnie)<br>
+            -Około 120 ml sody wodnej<br>
+            -Kostki lodu<br>
+            Przygotowanie:<br>W szklance lub szklance do muddlingu umieść 8-10 świeżych listków mięty.
+            Dodaj 2 łyżeczki cukru lub syropu cukrowego.
+            Za pomocą tłuczka do koktajli (muddlera) delikatnie rozgnieć miętę, aby uwolnić jej aromat.
+            Wlej sok z 1 limonki (około 30 ml) do szklanki.
+            Dodaj 50 ml białego rumu.
+            Włóż kilka kostek lodu do szklanki.
+            Opcjonalnie dodaj kilka pokrojonych truskawek dla dodatkowego smaku.
+            Uzupełnij szklankę sodą wodną (około 120 ml).
+            Delikatnie wymieszaj zawartość szklanki za pomocą długiej łyżki barmańskiej.
+            Udekoruj koktajl gałązką mięty oraz plasterkiem limonki.
+        </figcaption>
+        </figure>
+        <figure>
+            <img src="imgs/zdjecie2.jpg" alt="Zdjęcie 2">
+            <figcaption>Margarita<br>
+            Zestawny, kwaśny i oszałamiający koktajl z tequili, likierem triple sec i sokiem z limonki, często podawany z obrzeżeniem szkła solą.<br>
+            Składniki:<br>
+            -60 ml Tequili<br>
+            -30 ml Likieru triple sec<br>
+            -30 ml soku z limonki<br>
+            -Sól (do obrzeżenia szkła)<br>
+            -Lód<br>
+            -Plasterek limonki (do dekoracji, opcjonalnie)<br>
+            Przygotowanie:<br>
+            Obrzeż szklanki solą, przeciągając plasterkiem limonki po brzegu szkła, a następnie zanurzając szkło w soli.
+            W shakerze umieść 50 ml tequili, 30 ml likieru triple sec i sok z 1 limonki.
+            Dodaj kilka kostek lodu do shakera i energicznie wstrząśnij.
+            Przelej zawartość shakera do przygotowanej szklanki napełnionej lodem.
+            Udekoruj koktajl plasterkiem limonki.
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="imgs/zdjecie3.jpg" alt="Zdjęcie 3">
+            <figcaption>Piña Colada<br>
+            Egzotyczny, kremowy i słodki koktajl z rumem, mleczkiem kokosowym i sokiem ananasowym, często podawany z lodem.<br>
+            Składniki:<br>
+            -60 ml białego rumu<br>
+            -90 ml mleczka kokosowego<br>
+            -90 ml soku ananasowego<br>
+            -Lód<br>
+            -Kawałki ananasa (do dekoracji, opcjonalnie)<br>
+            -Wiórki kokosowe (do dekoracji, opcjonalnie)<br>
+            Przygotowanie:<br>
+            W blenderze połącz 50 ml białego rumu, 120 ml mleczka kokosowego i 120 ml soku ananasowego.
+            Dodaj kilka kostek lodu.
+            Blenduj, aż koktajl będzie gładki.
+            Przelej do wysokiej szklanki.
+            Udekoruj kawałkiem ananasa i wiórkami kokosowymi.
+        </figcaption>
+        </figure>
+        <figure>
+            <img src="imgs/zdjecie4.jpg" alt="Zdjęcie 4">
+            <figcaption>Mojito Strawberry<br>
+            Oryginalny, owocowy i orzeźwiający koktajl na bazie rumu, mięty, soku z limonki i truskawek, uzupełniony sodą.<br>
+            Składniki:<br>
+            -60 ml białego rumu<br>
+            -Kilka świeżych liści mięty<br>
+            -30 ml soku z limonki<br>
+            -Kilka kawałków truskawek<br>
+            -1 łyżeczka cukru (lub do smaku)<br>
+            -Soda wodna<br>
+            -Lód<br>
+            Przygotowanie:<br>
+            W szklance rozgnieć 8-10 listków mięty z 2 łyżeczkami cukru lub syropu cukrowego.
+            Dodaj 50 ml białego rumu i sok z 1 limonki.
+            Włóż kilka truskawek do szklanki i delikatnie je rozgnieć.
+            Dodaj kilka kostek lodu i zalej sodą.
+            Delikatnie wymieszaj i udekoruj listkiem mięty oraz plasterkiem limonki.
+        </figcaption>
+        </figure>
+        <figure>
+            <img src="imgs/zdjecie5.jpg" alt="Zdjęcie 5">
+            <figcaption>Cosmopolitan<br>
+            Elegancki, kwaśny i owocowy koktajl z wódki cytrynowej, likieru triple sec, soku żurawinowego i soku z limonki, często podawany z plasterkiem limonki.<br>
+            Składniki:<br>
+            -45 ml wódki cytrynowej<br>
+            -15 ml likieru triple sec<br>
+            -30 ml soku żurawinowego<br>
+            -15 ml soku z limonki<br>
+            -Plasterki limonki (do dekoracji, opcjonalnie)<br>
+            -Lód<br>
+            Przygotowanie:<br>
+            W shakerze umieść 50 ml wódki cytrynowej, 20 ml likieru triple sec, 30 ml soku żurawinowego i sok z 1 limonki.
+            Dodaj kilka kostek lodu i energicznie wstrząśnij.
+            Przelej przez sitko do schłodzonej koktajlówki.
+            Udekoruj plasterkiem limonki.
+        </figcaption>
+        </figure>
+        <figure>
+            <img src="imgs/zdjecie6.jpg" alt="Zdjęcie 6">
+            <figcaption>Martini<br>
+            Klasyczny, elegancki i wytrawny koktajl z ginu i wermutu, często podawany z oliwką lub plasterkiem cytryny.<br>
+            Składniki:<br>
+            -60 ml ginu<br>
+            -10 ml wytrawnego wermutu, możesz również użyć wina białego półwytrawnego lub wina białego półsłodkiego
+            kostki lodu<br>
+            -10 ml wytrawnego wermutu, możesz również użyć wina białego półwytrawnego lub wina białego półsłodkiego<br>
+            Przygotowanie:<br>
+            W koktajlówce umieść 60 ml ginu i 15 ml wermutu.
+            Dodaj kilka kostek lodu i delikatnie zamieszaj.
+            Przelej do schłodzonej kieliszka koktajlowego.
+            Udekoruj oliwką lub plasterkiem cytryny.</figcaption>
+        </figure>
+        <figure>
+            <img src="imgs/zdjecie7.jpg" alt="Zdjęcie 7">
+            <figcaption>Old Fashioned<br>
+            Klasyczny, bogaty i aromatyczny koktajl z whisky, cukru, gorzkich kropli i skórki pomarańczowej, podawany z kostką lodu.<br>
+            Składniki:<br>
+            -60 ml bourbonu lub rye whisky<br>
+            -1 łyżeczka cukru (lub syropu cukrowego)<br>
+            -Kilka kropel gorzkich kropli<br>
+            -Skórka pomarańczowa (do dekoracji)<br>
+            -Kostki lodu<br>
+            Przygotowanie:<br>
+            W szklance rozpuść 1 kostkę cukru w 1 łyżce wody.
+            Dodaj 2 krople gorzkich kropli i skórkę pomarańczową.
+            Włóż kilka kostek lodu i 50 ml bourbonu lub rye whisky.
+            Delikatnie wymieszaj.
+            Udekoruj skórką pomarańczową.
+        </figcaption>
+        </figure>
+        <figure>
+            <img src="imgs/zdjecie8.jpg" alt="Zdjęcie 8">
+            <figcaption>Moscow Mule<br>
+            Orzeźwiający, pikantny i cytrusowy koktajl z wódki, sokiem z limonki i piwem imbirowym, podawany w miedzianym kubku z plasterkiem limonki.<br>
+            Składniki:<br>
+            -60 ml wódki<br>
+            -20 ml soku z limonki<br>
+            -120 ml piwa imbirowego<br>
+            -Lód<br>
+            -Plasterki limonki (do dekoracji, opcjonalnie)<br>
+            Przygotowanie:<br>
+            W miedzianym kubku umieść 50 ml wódki, sok z 1/2 limonki i kilka kostek lodu.
+            Wlej 120 ml piwa imbirowego.
+            Delikatnie wymieszaj.
+            Udekoruj plasterkiem limonki.
+        </figcaption>
+        </figure>
+        <figure>
+            <img src="imgs/zdjecie9.jpg" alt="Zdjęcie 9">
+            <figcaption>Bloody Mary<br>
+            Pikantny, pełny i wyrazisty koktajl z wódki, soku pomidorowego, sosu Worcestershire, sosu Tabasco, soku z cytryny, soli i pieprzu, często podawany z dodatkami jak seler, oliwka i plaster cytryny.<br>
+            Składniki:<br>
+            -45 ml wódki<br>
+            -90 ml soku pomidorowego<br>
+            -Kilka kropel sosu Worcestershire<br>
+            -Kilka kropel sosu Tabasco (do smaku)<br>
+            -15 ml soku z cytryny<br>
+            -Sól (do przyprawienia)<br>
+            -Pieprz (do przyprawienia)<br>
+            -Seler (do dekoracji, opcjonalnie)<br>
+            -Oliwka (do dekoracji, opcjonalnie)<br>
+            -Plaster cytryny (do dekoracji, opcjonalnie)<br>
+            Przygotowanie:<br>
+            W szklance połącz 50 ml wódki, 120 ml soku pomidorowego, 15 ml soku z cytryny, 2 krople sosu Worcestershire, 2 krople sosu Tabasco, sól i pieprz.
+            Dodaj kilka kostek lodu.
+            Delikatnie wymieszaj.
+            Udekoruj plastrem cytryny i gałązką selera (opcjonalnie).
+        </figcaption>
+        </figure>
+        
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menuOptions = document.getElementById("menuOptions");
+            menuOptions.style.display = (menuOptions.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

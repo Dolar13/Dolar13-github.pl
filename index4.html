@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nas</title>
+    <style>
+        body {
+            background: url(imgs/Mocnyfull3.png) no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: rgb(85, 85, 84);
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-toggle {
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .menu-options {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: rgb(85, 85, 84);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .menu-options a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        .menu-options a:hover {
+            color: #4b4b4b;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+        @media screen and (max-width: 600px) {
+            .header {
+                text-align: center;
+            }
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .about-us {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Dodatkowy kontener dla tła */
+        .about-us-background {
+            background-color: rgb(85, 85, 84);
+            padding: 20px;
+            border-radius: 10px; /* Zaokrąglone krawędzie */
+            display: inline-block; /* Ustawienie jako blok w kontekście liniowym */
+        }
+
+        .about-us p {
+            margin-top: 20px;
+            line-height: 1.5;
+            color: white; /* Tekstowy kolor */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="imgs/Logo1.png" alt="Logo Kociołek.pl">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- Ikona trzech poziomych kresek -->
+        <div class="menu-options" id="menuOptions">
+            <a href="index.html">Strona główna</a>
+            <a href="index2.html">Kontakt</a>
+            <a href="index4.html">O nas</a>
+        </div>
+    </div>
+
+    <div class="about-us">
+        <div class="about-us-background"> <!-- Dodatkowy kontener dla tła -->
+            <h2>O nas</h2>
+            <p>Witaj na naszej stronie z przepisami na sztuce popularne drinki!</p>
+            <p>Jesteśmy zespołem pasjonatów, którzy kochają eksperymentować z różnymi smakami i alkoholami , aby stworzyć niezapomniane doznania kulinarno-koktajlowe.</p>
+            <p>Niezależnie od tego, czy jesteś doświadczonym barmanem, czy po prostu chcesz poznać parę przepisów, znajdziesz tutaj coś dla siebie.</p>
+            <p>Na naszej stronie poznasz parę ciekawych przepisów, jak je przyrządzić oraz dowiesz się jakich składników potrzebujesz.</p>
+            <p>Pamiętaj również o umiarze w piciu alkoholu. Cytując słowa pewnego popularnego konesera napojów wyskokowych: </p>
+            <p>"Niektórzy mówią, że nie można chlać jak się ma dzieci, ale to nieprawda, można, tylko trzeba wstawać rano. Na tym polega odpowiedzialność."</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menuOptions = document.getElementById("menuOptions");
+            menuOptions.style.display = (menuOptions.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

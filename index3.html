@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kociołek.pl</title>
+    <style>
+        body {
+            background: url(imgs/Mocnyfull3.png) no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: rgb(48, 48, 47);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-toggle {
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .menu-options {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: rgb(48, 48, 47);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .menu-options a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        .menu-options a:hover {
+            color: #4b4b4b;
+        }
+        .contact-message {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="imgs/Logo1.png" alt="Logo Kociołek.pl">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- Ikona trzech poziomych kresek -->
+        <div class="menu-options" id="menuOptions">
+            <a href="index.html">Strona główna</a> <!-- Zmieniony link na stronę główną -->
+            <a href="index2.html">Kontakt</a>
+            <a href="index4.html">O nas</a>
+        </div>
+    </div>
+    <div class="contact-message">
+        <h2>Dziękujemy za kontakt!</h2>
+        <p>Odczytamy twoją wiadomość jak najszybciej będzie to możliwe.</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menuOptions = document.getElementById("menuOptions");
+            menuOptions.style.display = (menuOptions.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
